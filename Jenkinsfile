@@ -1,5 +1,5 @@
 pipeline {
-	agent any
+	agent any {}
 	stages {
 	    stage('build1') {
     		steps {
@@ -34,6 +34,7 @@ pipeline {
 	    }
 	    failure {
 	        echo "in case of failure"
+	        mail to: pranav.aggwl@gmail.com, subject: 'Pipeline failed!'
 	    }
 	    unstable {
 	        echo "in case unstable, pipeline"
