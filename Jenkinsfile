@@ -16,7 +16,7 @@ pipeline {
 	    stage('build3') {
     		steps {
     			echo "Third step"
-                bat label: '', script: 'echo %date%'
+    			bat label: '', script: 'echo %date%'
     		}
 	    }
 	    stage('build4') {
@@ -24,6 +24,21 @@ pipeline {
                 bat 'set'
             	}
 	    }
+	    stage('build3') {
+	    	parallel {
+	    		stage("run parallel stage1"){
+	    			steps {
+	    				echo "parallel stage1"
+	    			}
+	    		}
+	    		stage("run parallel stage2"){
+	    			steps {
+	    				echo "parallel stage2"
+	    			}
+	    		}
+	    	}
+	    }
+	    
 	}
 	post{
 	    always {
