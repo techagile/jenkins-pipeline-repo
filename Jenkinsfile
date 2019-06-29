@@ -13,27 +13,28 @@ pipeline {
                 bat label: '', script: 'echo %date%'
     		}
 	    }
-	    stage('build3') {
+	    stage('unit test') {
     		steps {
-    			echo "Third step"
+    			echo "Unit Test"
     			bat label: '', script: 'echo %date%'
     		}
 	    }
-	    stage('build4') {
+	    stage('stress test') {
     		steps {
+    		echo "Stress Test"
                 bat 'set'
             	}
 	    }
-	    stage('build5') {
+	    stage('Deploy') {
 	    	parallel {
-	    		stage("run parallel stage1"){
+	    		stage("run parallel Deploy1"){
 	    			steps {
-	    				echo "parallel stage1"
+	    				echo "parallel Deploy1"
 	    			}
 	    		}
-	    		stage("run parallel stage2"){
+	    		stage("run parallel Deploy2"){
 	    			steps {
-	    				echo "parallel stage2"
+	    				echo "parallel Deploy2"
 	    			}
 	    		}
 	    	}
