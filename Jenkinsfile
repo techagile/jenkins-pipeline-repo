@@ -24,7 +24,7 @@ pipeline {
                 bat 'set'
             	}
 	    }
-	    stage('build3') {
+	    stage('build5') {
 	    	parallel {
 	    		stage("run parallel stage1"){
 	    			steps {
