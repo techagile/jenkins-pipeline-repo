@@ -33,7 +33,6 @@ pipeline {
 	        echo "in case of success, pipeline"
 	    }
 	    failure {
-	        //echo "in case of failure"
 	        mail to: pranav.aggwl@gmail.com, subject: 'Pipeline failed!'
 	    }
 	    unstable {
