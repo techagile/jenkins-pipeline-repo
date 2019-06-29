@@ -4,7 +4,7 @@ pipeline {
 	    stage('build1') {
     		steps {
     			echo "First step"
-                bat label: '', script: 'echo %date%'
+                	bat label: '', script: 'echo %date%'
     		}
 	    }
 	    stage('build2') {
