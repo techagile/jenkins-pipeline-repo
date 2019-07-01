@@ -15,4 +15,6 @@ Additionally, the pipeline was triggered by upstream jobs thus showing value str
 <br>
 This is initial run that shows various stages and how trivial to work with Jenkinsfile. Other projects would show the real power of Jenkinsfile, using complex examples<br>
 Stay tuned! <br>
-
+<br>
+References:<br>
+<a href="https://www.youtube.com/watch?v=-GsvomI4CCQ">Jenkins Pipeline build & learn</a>
